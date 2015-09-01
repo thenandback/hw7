@@ -118,6 +118,18 @@ $(function() {
     });
 });
 
+$(function() {
+    $('tbody').on('mouseenter', 'tr', function() {
+        $(this).addClass('selected');
+    });
+});
+
+$(function() {
+    $('tbody').on('mouseleave', 'tr', function() {
+        $(this).removeClass('selected');
+    });
+});
+
 // Form that accepts name to create & add new donut shop
 $(function() {
     var $newItemButton = $('#newItemButton');
@@ -142,6 +154,9 @@ $(function() {
         }
     });
 });
+
+
+
 
 
 

@@ -93,3 +93,7 @@ span {
 	vertical-align: super;
 	font-size: 6pt;
 }
+
+.selected {
+	font-weight: bold;
+}
