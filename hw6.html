@@ -1,0 +1,54 @@
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Doughnut Central</title>
+
+		<meta charset="utf-8" />
+		<link href="css/style.css" type="text/css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<header>
+		</header>
+
+		<h1>Top Pot Doughnuts</h1>
+		
+		<div id="primary">
+			<table id="rows">
+                <thead>
+                    <tr>
+                        <th>Location</th>
+                        <th>Donuts/hr</th>
+                        <th>Donuts/day</th>
+                    </tr>
+                </thead>
+                <tbody id="table">
+                </tbody>
+            </table>
+
+            <div id="newItemButton">
+				<button>new item</button>
+			</div>
+
+			<form>
+				<input type="text" placeholder="Add store..." />
+				<input type="submit" value="add" />
+			</form>
+
+			<footer>
+				Top Pot Doughnuts<span>&reg;</span> 4321 Doughnut Drive NE Seattle, WA 98102
+			</footer>
+		</div>
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+		</script>
+
+		<script>
+			window.jQuery || document.write('<script src="js/jquery.js"></script>')
+        </script>
+
+        <script src="js/jsDonut.js"></script>
+	</body>
+</html>

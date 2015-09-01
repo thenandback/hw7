@@ -1,0 +1,95 @@
+body {
+	margin: 0;
+	background-image: url("https://marciepettitta2.files.wordpress.com/2011/11/backgroun-effect.jpg");
+}
+
+header {
+	background-image: url("http://static.tumblr.com/f2444bae6687c57b88dcd476ac611f5f/iokgscd/EcNn30zzv/tumblr_static_wf-donuts-1.jpg");
+	background-repeat: repeat-x;
+	height: 120px;	
+}
+
+h1 {
+	font-family: "Comic Sans MS", serif;
+	font-size: 32pt;
+	text-align: center;
+	text-shadow: 5px 5px #999999;
+}
+
+#primary {
+	width: 800px;
+	margin-left: auto;
+	margin-right: auto;
+	border: 4px gray solid;
+}
+
+#rows {
+	width: 100%;
+	text-align: center;
+	padding: 20px 0px 20px 0px;
+}
+
+thead {
+	font-style: italic;
+	font-size: 16pt;
+}
+
+td:first-of-type, thead {
+	font-weight: bold;
+}
+
+.trash {
+	height: 14pt;
+	width: 14pt;
+}
+
+.trash:hover {
+	background-color: gray;
+}
+
+#newItemButton, form {
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 20px;
+}
+
+form {
+	width: 30%;
+}
+
+input[type='submit'], button {
+  background-color: gray;
+  color: white;
+  border-radius: 6px;
+}
+
+input[type='text']:focus {
+  border: 1px solid gray;
+  outline: none;
+}
+
+input, button{
+  height: 1.5em;
+  font-size: 12pt;  
+}
+
+#newItemButton {
+	width: 11%;
+}
+
+input[type='submit'] {
+	font-size: 14pt;
+	padding: 2pt;
+}
+
+footer {
+	text-align: center;
+	background-color: #993300;
+	font-size: 12px;
+	padding: 2px;
+}
+
+span {
+	vertical-align: super;
+	font-size: 6pt;
+}
