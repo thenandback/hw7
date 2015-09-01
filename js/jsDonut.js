@@ -121,11 +121,13 @@ $(function() {
     });
 
     $newItemForm.on('submit', function(e) {
-        e.preventDefault();        
-        var newText = $('input:text').val();
-        var newStore = makeStore(newText, chain);
-        addRow(newStore);
-        $textInput.val('');
+            e.preventDefault();        
+            var newText = $('input:text').val();
+        if (newText.trim() != '') {
+            var newStore = makeStore(newText, chain);
+            addRow(newStore);
+            $textInput.val('');
+        };
     });
 });
 
