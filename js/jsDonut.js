@@ -4,7 +4,7 @@ var Master = function(shopList) {
     this.addShop = function(shop) {
         this.shopList.push(shop);
     };
-    
+
     this.generateReport = function() {
         for (var i = 0; i < this.shopList.length; i++) {
             console.log(this.shopList[i].name + " sells " + this.shopList[i].genDPH() + 
@@ -12,6 +12,7 @@ var Master = function(shopList) {
         }
     };
 };
+
 
 // DonutShop takes two "time" parameters between 0 and 24.
 var DonutShop = function(name, openTime, closeTime, minClients, maxClients, donuts) {
@@ -87,6 +88,17 @@ var addRow = function(shop) {
     $('tbody#table').append(row);
 };
 
+// Checks for duplicate store names
+var dupCheck = function(name, main) {
+    for (var i = 0; i < main.shopList.length; i++) {
+        if (main.shopList[i].name.toUpperCase() === name.toUpperCase()) {
+            return false;
+        }
+    }
+
+    return true;
+};
+
 $(function() {
     var list = chain.shopList;
     for (var i = 0; i < list.length; i++) {
@@ -123,11 +135,11 @@ $(function() {
     $newItemForm.on('submit', function(e) {
             e.preventDefault();        
             var newText = $('input:text').val();
-        if (newText.trim() != '') {
+        if (newText.trim() !== '' && dupCheck(newText, chain)) {
             var newStore = makeStore(newText, chain);
             addRow(newStore);
             $textInput.val('');
-        };
+        }
     });
 });
 
